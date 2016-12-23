@@ -19,8 +19,8 @@ export default class HelloWorld extends React.Component {
 
   updateName = (name) => {
     // this.setState({ name });
-    console.log(this.props);
-    this.props.onNameUpdate(name);
+    // console.log(this.props);
+    // this.props.onNameUpdate(name);
   };
 
   render() {
