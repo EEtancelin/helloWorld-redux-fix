@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { HELLO_WORLD_NAME_UPDATE } from '../constants/helloWorldConstants';
 
 const name = (state = '', action) => {
+  console.log(action);
   switch (action.type) {
     case HELLO_WORLD_NAME_UPDATE:
       return action.text;
