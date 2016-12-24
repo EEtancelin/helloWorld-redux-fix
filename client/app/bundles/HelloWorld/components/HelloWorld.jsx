@@ -11,23 +11,19 @@ export default class HelloWorld extends React.Component {
    */
   constructor(props, _railsContext) {
     super(props);
-
     // How to set initial state in ES6 class syntax
     // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-    this.state = { name: this.props.name };
   }
 
   updateName = (name) => {
-    // this.setState({ name });
-    // console.log(this.props);
-    // this.props.onNameUpdate(name);
+    this.props.onNameUpdate(name);
   };
 
   render() {
     return (
       <div>
         <h3>
-          Hello, {this.state.name}!
+          Hello, {this.props.name}!
         </h3>
         <hr />
         <form >
@@ -37,8 +33,8 @@ export default class HelloWorld extends React.Component {
           <input
             id="name"
             type="text"
-            value={this.state.name}
-            onChange={(e) => this.updateName(e.target.value)}
+            value={this.props.name}
+            onChange={(e) => this.props.onNameUpdate(e.target.value)}
           />
         </form>
       </div>
