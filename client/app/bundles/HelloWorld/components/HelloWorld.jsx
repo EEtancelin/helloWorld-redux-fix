@@ -1,3 +1,4 @@
+
 import React, { PropTypes } from 'react';
 
 export default class HelloWorld extends React.Component {
@@ -14,11 +15,7 @@ export default class HelloWorld extends React.Component {
     // How to set initial state in ES6 class syntax
     // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
   }
-
-  updateName = (name) => {
-    this.props.onNameUpdate(name);
-  };
-
+  
   render() {
     return (
       <div>
